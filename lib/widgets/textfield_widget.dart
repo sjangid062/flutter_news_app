@@ -3,10 +3,14 @@ import 'package:flutter_news_app/utils/dimensions.dart';
 
 class TextFieldWidget extends StatelessWidget {
   const TextFieldWidget(
-      {super.key, required this.hintText, required this.controller});
+      {super.key,
+      required this.hintText,
+      required this.controller,
+      required this.onChanged});
 
   final String hintText;
   final TextEditingController controller;
+  final ValueChanged<String> onChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -16,8 +20,9 @@ class TextFieldWidget extends StatelessWidget {
           child: TextField(
             controller: controller,
             style: const TextStyle(fontWeight: FontWeight.w300),
+            onChanged: onChanged,
             decoration: InputDecoration(
-              fillColor: Colors.grey.shade300,
+              fillColor: Colors.grey.shade100,
               filled: true,
               hintText: hintText,
               contentPadding:

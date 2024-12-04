@@ -25,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen>
   TabController? tabController;
   final NetworkController networkController = Get.put(NetworkController());
   final ThemeController themeController = Get.find();
+
   List<String> tabTitle = [
     "Top News",
     "Business",
@@ -32,6 +33,7 @@ class _HomeScreenState extends State<HomeScreen>
     "Entertainment",
     "Sports"
   ];
+
   @override
   void initState() {
     super.initState();

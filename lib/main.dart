@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_news_app/screens/search_screen/search_screen.dart';
 import 'package:flutter_news_app/screens/splash/splash_screen.dart';
 import 'package:flutter_news_app/utils/theme_controller.dart';
 import 'package:get/get.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         theme: themeController.isDarkMode.value
             ? ThemeController.darkTheme
             : ThemeController.lightTheme,
-        home: const SplashScreen(),
+        home: const SearchScreen(),
       );
     });
   }
